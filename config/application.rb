@@ -36,5 +36,14 @@ module OneBitContactsApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    # rack-cors configuration
+    allow do
+      # not the correct in production
+       origins '*'
+       resource '*',
+        headers: :any,
+        methods: %i(get post put patch delete options head)
+    end
+    config.middleware.use Rack::Attack
   end
 end
