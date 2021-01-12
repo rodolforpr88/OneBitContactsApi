@@ -37,13 +37,15 @@ module OneBitContactsApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     # rack-cors configuration
-    allow do
-      # not the correct in production
-       origins '*'
-       resource '*',
-        headers: :any,
-        methods: %i(get post put patch delete options head)
-    end
+    # not the correct in production
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+          headers: :any,
+          methods: %i(get post put patch delete options head)
+      end
+     end            
     config.middleware.use Rack::Attack
   end
 end

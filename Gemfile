@@ -40,3 +40,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rack-cors'
 # A rack middleware for throttling and blocking abusive requests
 gem 'rack-attack'
+# Flexible authentication solution for Rails with Warden
+gem 'devise'
