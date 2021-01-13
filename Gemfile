@@ -42,3 +42,5 @@ gem 'rack-cors'
 gem 'rack-attack'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
+# Simple (but safe) token authentication for Rails apps or API with Devise.
+gem 'simple_token_authentication'
