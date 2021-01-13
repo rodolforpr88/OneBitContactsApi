@@ -36,3 +36,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
+gem 'rack-cors'
+# A rack middleware for throttling and blocking abusive requests
+gem 'rack-attack'
+# Flexible authentication solution for Rails with Warden
+gem 'devise'
+# Simple (but safe) token authentication for Rails apps or API with Devise.
+gem 'simple_token_authentication'
