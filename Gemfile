@@ -44,3 +44,5 @@ gem 'rack-attack'
 gem 'devise'
 # Simple (but safe) token authentication for Rails apps or API with Devise.
 gem 'simple_token_authentication'
+# Pagy is the ultimate pagination gem that outperforms the others in each and every benchmark and comparison.
+gem 'pagy', '~> 3.5'

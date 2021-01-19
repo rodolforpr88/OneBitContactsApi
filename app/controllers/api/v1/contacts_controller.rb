@@ -1,10 +1,11 @@
 class Api::V1::ContactsController < Api::V1::ApiController
   before_action :set_contact, only: [:show, :update, :destroy]
   before_action :require_authorization!, only: [:show, :update, :destroy]
-  
+  after_action { pagy_headers_merge(@pagy) if @pagy }
+
   # GET /api/v1/contacts
   def index
-    @contacts = current_user.contacts
+    @pagy, @contacts = pagy(current_user.contacts, items: 5)
     render json: @contacts
   end
   
